@@ -36,9 +36,9 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && sh ~/osd.sh
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%&& sh ~/osd.sh
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status && sh ~/osd.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && sh ~/Scripts/osd.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && sh ~/Scripts/osd.sh
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status && sh ~/Scripts/osd.sh
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -156,7 +156,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "sh ~/Rice/Scripts/power.sh"
+bindsym $mod+Shift+e exec "sh ~/Scripts/power.sh"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -200,15 +200,15 @@ bindsym $mod+slash exec catfish
 bindsym Print exec --no-startup-id flameshot gui
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 && sh ~/b-osd.sh
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 && sh ~/b-osd.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 && sh ~/Scripts/b-osd.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 && sh ~/Scripts/b-osd.sh
 
 exec --no-startup-id solarbg -t Desert -l 40:45 -m sun
 exec --no-startup-id polybar
 exec --no-startup-id picom
-exec --no-startup-id ~/Rice/Scripts/conky.sh
-exec --no-startup-id ~/Rice/Scripts/mojave.sh
-exec --no-startup-id ~/Rice/Scripts/fade-in.sh
+exec --no-startup-id ~/Scripts/conky.sh
+exec --no-startup-id solarbg -m solar -t Desert -l 40:45
+exec --no-startup-id ~/Scripts/fade-in.sh
 exec --no-startup-id libinput-gestures
 exec --no-startup-id xscreensaver -nosplash
 exec --no-startup-id glava --desktop
