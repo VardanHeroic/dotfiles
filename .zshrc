@@ -9,6 +9,7 @@ zstyle :compinstall filename '/home/vardan/.zshrc'
 
 # ~/.zshrc
 alias hgrep='history | grep'
+alias ls='ls --color'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
@@ -24,9 +25,9 @@ autoload -Uz compinit
 compinit
 
 if [ "$TERM" = "linux" ]; then
-    echo -en "\e]P0000000" #black
-    echo -en "\e]P8D8D8D8" #darkgrey
-    echo -en "\e]P1AB4642" #darkred
+     echo -en "\e]P0000000" #black
+     echo -en "\e]P8D8D8D8" #darkgrey
+     echo -en "\e]P1AB4642" #darkred
     echo -en "\e]P9AB4642" #red
     echo -en "\e]P2A1B56C" #darkgreen
     echo -en "\e]PAA1B56C" #green
