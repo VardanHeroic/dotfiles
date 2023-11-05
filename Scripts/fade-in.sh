@@ -3,7 +3,7 @@
 disp="eDP-1"
 
 light -S 0
-sleep 3
+sleep 5
 light -S 0
 sleep 0.016
 light -S 2.5

@@ -9,10 +9,12 @@ zstyle :compinstall filename '/home/vardan/.zshrc'
 
 # ~/.zshrc
 alias hgrep='history | grep'
-alias ls='ls --color'
+alias ls='lsd'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias vim='nvim'
+alias cat='bat'
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export EDITOR=nvim
