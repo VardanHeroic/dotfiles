@@ -12,26 +12,21 @@ set clipboard+=unnamedplus
 call plug#begin()
 
 Plug 'wakatime/vim-wakatime'
-
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'neovim/nvim-lspconfig'
-
 Plug 'pedro757/emmet'
 Plug 'stevearc/vim-vscode-snippets'
-
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
-"Plug 'https://github.com/ellisonleao/gruvbox.nvim' 
 Plug 'https://github.com/paradigm/vim-multicursor'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/ap/vim-css-color'

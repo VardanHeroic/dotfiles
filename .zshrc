@@ -13,12 +13,11 @@ alias ls='lsd'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias vim='nvim'
 alias cat='bat'
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export EDITOR=nvim
 export PATH="$PATH:/home/vardan/.local/bin"
+export EDITOR='nvim'
 
 eval "$(starship init zsh)"
 
@@ -45,5 +44,11 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]PFFFFFFF" #white
     clear #for background artifacting
 fi
+
+
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
+
 
 # End of lines added by compinstall
