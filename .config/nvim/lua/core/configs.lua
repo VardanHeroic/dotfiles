@@ -50,5 +50,11 @@ vim.opt.fillchars = {
     foldclose = "▸"
 }
 
+if(vim.g.neovide == true) 
+then
+    vim.opt.guifont = 'SauceCodePro Nerd Font:h12'
+    vim.g.neovide_transparency = 0.3
+end
+
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
