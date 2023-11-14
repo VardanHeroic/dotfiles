@@ -55,7 +55,7 @@ require("lazy").setup({
     { "lewis6991/gitsigns.nvim" },
     { "windwp/nvim-ts-autotag" },
     { "nvim-lualine/lualine.nvim" },
-    { "VardanHeroic/nvim-base16" },
+    { "RRethy/nvim-base16" },
     { "nvim-treesitter/nvim-treesitter" },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -67,5 +67,6 @@ require("lazy").setup({
     { "mhartington/formatter.nvim" },
     { 'saadparwaiz1/cmp_luasnip' },
     { 'norcalli/nvim-colorizer.lua' },
-    { "xiyaowong/transparent.nvim", lazy = false }
+    { "xiyaowong/transparent.nvim", lazy = false },
+    { "stevearc/vim-vscode-snippets" },
 })

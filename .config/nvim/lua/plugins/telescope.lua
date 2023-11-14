@@ -18,6 +18,9 @@ require('telescope').setup({
 })
 
 local TelescopePrompt = {
+    TelescopeNormal = {
+        bg = nil,
+    },
     TelescopeBorder = {
         bg = nil,
     },
