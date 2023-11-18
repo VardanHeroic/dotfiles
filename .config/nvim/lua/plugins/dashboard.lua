@@ -32,6 +32,15 @@ require("dashboard").setup({
 				action = ":Ranger",
 			},
 			{
+				icon = " ",
+				icon_hl = "Title",
+				desc = "Terminal",
+				desc_hl = "String",
+				key = "t",
+				key_hl = "Number",
+				action = ":tab terminal ",
+			},
+			{
 				icon = "󰈞 ",
 				icon_hl = "Title",
 				desc = "Find files",

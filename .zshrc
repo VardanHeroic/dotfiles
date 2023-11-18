@@ -8,12 +8,12 @@ bindkey -v
 zstyle :compinstall filename '/home/vardan/.zshrc'
 
 # ~/.zshrc
-alias hgrep='history | grep'
+alias hgrep='cat -b ~/.histfile | grep'
+alias history='cat -b ~/.histfile '
 alias ls='lsd'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias cat='bat'
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PATH="$PATH:/home/vardan/.local/bin"
