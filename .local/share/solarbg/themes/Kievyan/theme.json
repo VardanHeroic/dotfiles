@@ -1,0 +1,44 @@
+[
+	{
+		"path": "1.jpg",
+		"start": -90,
+		"end": -5,
+		"afternoon": false
+	},
+	{
+		"path": "2.jpg",
+		"start": 0,
+		"end": 20,
+		"afternoon": false
+	},
+	{
+		"path": "3.jpg",
+		"start": 20,
+		"end": 40,
+		"afternoon": false
+	},
+	{
+		"path": "3.jpg",
+		"start": 40,
+		"end": 90,
+		"afternoon": false
+	},
+	{
+		"path": "4.jpg",
+		"start": 90,
+		"end": 40,
+		"afternoon": true
+	},
+	{
+		"path": "5.jpg",
+		"start": 40,
+		"end": 20,
+		"afternoon": true
+	},
+	{
+		"path": "6.jpg",
+		"start": 20,
+		"end": 0,
+		"afternoon": true
+	}
+]
