@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome,Source Code Pro ,  sans-serif;
+    font-family: FontAwesome,Sauce Code Pro Nerd Font,  sans-serif;
     font-size: 12px;
 	min-height: 20px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.0); 
+    background-color: rgba(43, 48, 59, 0.0);
 /*	background: linear-gradient(90deg,#5106db,#ff1593);
 	background-size: 400% 400%;
 	animation: gradient 5s linear infinite; */
