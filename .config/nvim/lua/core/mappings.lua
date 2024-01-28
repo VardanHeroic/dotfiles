@@ -19,7 +19,7 @@ vim.keymap.set("v", "h", ";")
 vim.keymap.set("n", "<leader>f", ":Format<CR>")
 vim.keymap.set("n", "<leader>F", ":FormatWrite<CR>")
 
-vim.keymap.set("i", "ff", "<ESC>")
+vim.keymap.set("i", "jj", "<ESC>")
 
 vim.keymap.set("n", "<leader>t", ":tab terminal<CR> | :setlocal nonumber norelativenumber<CR>")
 vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]])

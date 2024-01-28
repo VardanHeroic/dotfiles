@@ -2,43 +2,36 @@
 	{
 		"path": "0.png",
 		"start": -90,
-		"end": -5,
-		"afternoon": false
+		"end": -5
 	},
 	{
 		"path": "1.png",
 		"start": -5,
-		"end": 20,
-		"afternoon": false
+		"end": 20
 	},
 	{
 		"path": "2.png",
 		"start": 20,
-		"end": 40,
-		"afternoon": false
+		"end": 40
 	},
 	{
 		"path": "3.png",
 		"start": 40,
-		"end": 90,
-		"afternoon": false
+		"end": 90
 	},
 	{
 		"path": "3.png",
 		"start": 90,
-		"end": 20,
-		"afternoon": true
+		"end": 20
 	},
 	{
 		"path": "4.png",
 		"start": 20,
-		"end": -5,
-		"afternoon": true
+		"end": -5
 	},
 	{
 		"path": "0.png",
 		"start": -5,
-		"end": -90,
-		"afternoon": true
+		"end": -90
 	}
 ]

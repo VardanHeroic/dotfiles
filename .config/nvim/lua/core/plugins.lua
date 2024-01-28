@@ -70,4 +70,5 @@ require("lazy").setup({
 	{ "xiyaowong/transparent.nvim", lazy = false },
 	{ "stevearc/vim-vscode-snippets" },
 	{ "wakatime/vim-wakatime" },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })

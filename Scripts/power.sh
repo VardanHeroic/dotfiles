@@ -19,6 +19,8 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
+#󰌾
+hibernate=''
 shutdown=''
 reboot=''
 lock=''
@@ -55,7 +57,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$lock\n$suspend\n$logout\n$hibernate\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -70,6 +72,8 @@ run_cmd() {
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
+        elif [[ $1 == '--hibernate' ]]; then
+            systemctl hibernate
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$XDG_SESSION_DESKTOP" == 'openbox' ]]; then
 				openbox --exit
@@ -105,6 +109,10 @@ case ${chosen} in
 			i3lock
 		fi
 		swaylock
+        ;;
+
+    $hibernate)
+		run_cmd --hibernate
         ;;
     $suspend)
 		run_cmd --suspend
