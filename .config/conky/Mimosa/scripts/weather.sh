@@ -4,7 +4,7 @@
 # so that conky will still display the weather when offline even though it doesn't up to date
 
 # you can use this or replace with yours
-api_key=bd5e378503939ddaee76f12ad7a97608
+api_key=9d4d3fc71b9691ff8794c2b2c3f982c0
 # get your city id at https://openweathermap.org/find and replace
 city_id=616052
 

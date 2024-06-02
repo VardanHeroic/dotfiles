@@ -12,7 +12,7 @@ window#waybar {
 	animation: gradient 5s linear infinite; */
     color: #ffffff;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: .1s;
 }
 
 
@@ -54,7 +54,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 5px 0 3.5px;
     background-color: transparent;
     color: #ffffff;
 }

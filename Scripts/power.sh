@@ -65,15 +65,15 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			systemctl poweroff
+			canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			systemctl reboot
+			canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
-        elif [[ $1 == '--hibernate' ]]; then
-            systemctl hibernate
+        # elif [[ $1 == '--hibernate' ]]; then
+        #     canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl hibernate
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$XDG_SESSION_DESKTOP" == 'openbox' ]]; then
 				openbox --exit
@@ -82,7 +82,7 @@ run_cmd() {
 			elif [[ "$XDG_SESSION_DESKTOP" == 'i3' ]]; then
 				i3-msg exit
 			elif [[ "$XDG_SESSION_DESKTOP" == 'hyprland' ]]; then
-				hyprctl dispatch exit
+				canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/service-logout.ogg && hyprctl dispatch exit
 			elif [[ "$XDG_SESSION_DESKTOP" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			fi
@@ -108,12 +108,13 @@ case ${chosen} in
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
 		fi
+        canberra-gtk-play -f /usr/share/sounds/MIUI/stereo/desktop-screen-lock.ogg &&
 		swaylock
         ;;
 
-    $hibernate)
-		run_cmd --hibernate
-        ;;
+  #   $hibernate)
+		# run_cmd --hibernate
+  #       ;;
     $suspend)
 		run_cmd --suspend
         ;;

@@ -1,7 +1,11 @@
 -- Setup language servers.
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup({})
-lspconfig.tsserver.setup({})
+lspconfig.tsserver.setup({
+	on_attach = function(client, bufnr)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

@@ -9,16 +9,14 @@
 city_id=616052
 
 # you can use this or replace with yours
-api_key=bd5e378503939ddaee76f12ad7a97608
-
-# choose between metric for Celcius or imperial for fahrenheit
+api_key=9d4d3fc71b9691ff8794c2b2c3f982c0
+## choose between metric for Celcius or imperial for fahrenheit
 unit=metric
 
-# i'm not sure it will support all languange, 
+# i'm not sure it will support all languange,
 lang=en
 
 # Main command
 url="api.openweathermap.org/data/2.5/weather?id=${city_id}&appid=${api_key}&cnt=5&units=${unit}&lang=${lang}"
 curl ${url} -s -o ~/.cache/weather.json
-
 exit

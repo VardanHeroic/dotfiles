@@ -17,16 +17,16 @@
          "warp-on-scroll": false,
          "format": "{icon}",
          "format-icons": {
-             "urgent": "",
-             "active": "",
-             "default": ""
+             "urgent":"",
+             "active":"",
+             "default":""
          }
      },
-	
+
 	"hyprland/window": {
 		"format":" {title}",
 		"separate-outputs": true,
-		 "max-length": 65,	
+		 "max-length": 65,
 
 	},
 
@@ -166,4 +166,3 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
-
