@@ -4,6 +4,7 @@ vim.cmd.colorscheme("base16-default-dark")
 vim.cmd("set termguicolors")
 
 vim.cmd("au ColorScheme * hi Normal ctermbg=none guibg=none")
+vim.highlight.priorities.semantic_tokens = 95
 --au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 --vim.cmd('highlight Normal ctermbg=none')
