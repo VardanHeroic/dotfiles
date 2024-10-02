@@ -3,7 +3,7 @@
 disp="eDP-1"
 
 light -S 0
-sleep 5
+sleep 3
 light -S 0
 sleep 0.016
 light -S 2.5
@@ -26,7 +26,6 @@ light -S 22.5
 sleep 0.016
 light -S 25
 sleep 0.016
-canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/service-login.ogg &
 light -S 27.5
 sleep 0.016
 light -S 30

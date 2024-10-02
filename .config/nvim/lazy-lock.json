@@ -27,6 +27,7 @@
   "ranger.nvim": { "branch": "main", "commit": "d3b032feee6b3b0cf923222f260523e2bd7f3ad3" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "transparent.nvim": { "branch": "main", "commit": "fd35a46f4b7c1b244249266bdcb2da3814f01724" },
+  "vim-suda": { "branch": "master", "commit": "b97fab52f9cdeabe2bbb5eb98d82356899f30829" },
   "vim-vscode-snippets": { "branch": "master", "commit": "812e60d1c648f889328761ec71daff09d1eb3177" },
   "vim-wakatime": { "branch": "master", "commit": "3cb40867cb5a3120f9bef76eff88edc7f1dc1a23" }
 }

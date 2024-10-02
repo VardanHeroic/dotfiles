@@ -1,4 +1,6 @@
 -- lol
+
+require("plugins.suda")
 require("core.plugins")
 require("core.mappings")
 require("core.colors")

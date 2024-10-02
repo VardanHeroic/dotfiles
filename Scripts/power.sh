@@ -34,7 +34,9 @@ rofi_cmd() {
 	rofi -dmenu \
 		-p "Uptime: $uptime" \
 		-mesg "Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+		-theme ${dir}/${theme}.rasi \
+        -window-title "Powermenu" \
+        -normal-window
 }
 
 # Confirmation CMD
@@ -65,25 +67,26 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl poweroff
+			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl reboot
+			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
         # elif [[ $1 == '--hibernate' ]]; then
         #     canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/desktop-logout.ogg && systemctl hibernate
+        canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/service-logout.ogg
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$XDG_SESSION_DESKTOP" == 'openbox' ]]; then
+			if [[ "$XDG_CURRENT_DESKTOP" == 'openbox' ]]; then
 				openbox --exit
-			elif [[ "$XDG_SESSION_DESKTOP" == 'bspwm' ]]; then
+			elif [[ "$XDG_CURRENT_DESKTOP" == 'bspwm' ]]; then
 				bspc quit
-			elif [[ "$XDG_SESSION_DESKTOP" == 'i3' ]]; then
+			elif [[ "$XDG_CURRENT_DESKTOP" == 'i3' ]]; then
 				i3-msg exit
-			elif [[ "$XDG_SESSION_DESKTOP" == 'hyprland' ]]; then
-				canberra-gtk-play -f /usr/share/sounds/ubuntu/stereo/service-logout.ogg && hyprctl dispatch exit
-			elif [[ "$XDG_SESSION_DESKTOP" == 'plasma' ]]; then
+			elif [[ "$XDG_CURRENT_DESKTOP" == 'Hyprland' ]]; then
+				hyprctl dispatch exit
+			elif [[ "$XDG_CURRENT_DESKTOP" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			fi
 		fi

@@ -105,10 +105,10 @@ button:hover {
 }
 
 .modules-right,.modules-left,.modules-center{
-	background: radial-gradient(circle,#5106db,#ff1593);
+    background: linear-gradient(90deg, rgba(81,6,219,1) 0%, rgba(255,21,147,1) 100%);
 	background-repeat: no-repeat;
-	background-size: 4000%,4000%;
-	animation: gradient 10s ease infinite;
+	background-size: 5000%,5000%;
+	animation: gradient 5s linear infinite alternate;
 	border-radius: 10px;
 	margin: 5px 9px;
 	margin-bottom: 0;

@@ -23,20 +23,19 @@ USE_BUTTONS=YES
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
     location:                    east;
     anchor:                      east;
     fullscreen:                  false;
     width:                       115px;
     x-offset:                    -15px;
     y-offset:                    0px;
+    border-radius:               30px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               2px;
     border-color:                @selected;
     cursor:                      "default";
     background-color:            @background;
@@ -49,7 +48,7 @@ mainbox {
     margin:                      0px;
     padding:                     15px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               00px;
     border-color:                @selected;
     background-color:            transparent;
     children:                    [ "listview" ];

@@ -1,0 +1,168 @@
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$nim\
+$nodejs\
+
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$zig\
+$nix_shell\
+$conda\
+
+$aws\
+$gcloud\
+$env_var\
+$crystal\
+$cmd_duration\
+$custom\
+$fill\
+$battery\
+$time\
+$line_break\
+
+
+
+$status\n\
+$character"""
+add_newline = false
+
+
+
+########################################
+# prompt detail settings
+########################################
+
+[username]
+disabled = false
+show_always = true
+style_user = "#5faf5f bold" # 3d6b33
+style_root = "red bold"
+# format = "user: [$user]($style) "
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+## Git settings
+[git_branch]
+style = "bold blue"
+# symbol = "🌱 "
+truncation_length = 100  # no truncation
+truncation_symbol = "..."
+
+[git_status]
+modified = "M"
+untracked = "U"
+deleted = "D"
+renamed = "R"
+conflicted = "C"
+ahead = "⇡"  # unpushed commit
+behind = "⇣"
+diverged = "⇕"
+
+#[git_state]
+#progress_divider = " of "
+#cherry_pick = "🍒 PICKING"
+
+## Memory
+[memory_usage]
+disabled = false
+threshold = 1
+show_percentage = false
+show_swap = true
+# style = "bold dimmed green"
+style = "bold gray"
+
+[jobs]
+# doc: https://starship.rs/config/#jobs
+symbol = "🏃‍♂️ "
+threshold = 1
+
+[battery]
+disabled = false
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰁿 "
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+
+format = "[$time]($style) "
+style = "bold yellow"
+use_12hr = false
+time_format = "%R"
+utc_time_offset = "+4"
+time_range="-"  # always: time_range="00:00:00-23:59:59"
+
+[line_break]
+disabled = true # separate prompt into 2 lines
+
+[character]
+# symbol = "🍺"
+disabled = false
+success_symbol = "[>](bold white)"
+error_symbol = "[>](bold red)"
+
+
+[custom.temp]
+disabled = false
+
+symbol = "🌡️"
+command = "expr $(cat /sys/class/thermal/thermal_zone0/temp) / 1000 "
+style = "bold yellow"
+format = '[$symbol($output )]($style)'
+
+
+
+########################################
+# disabled: prompt detail settings
+########################################
+
+[gcloud]
+disabled = true
+
+[aws]
+# format = "on [$symbol$profile(\($region\))]($style) ""
+disabled = true
+format = ""
+style = "bold blue"
+symbol = "AWS Region: "
+
+[aws.region_aliases]
+# ap-northeast-1 = "an1"
+ap-southeast-2 = "au"
+us-east-1 = "va"
