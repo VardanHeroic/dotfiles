@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"kelly-lin/ranger.nvim",
+		"VardanHeroic/ranger.nvim",
 		config = function()
 			require("ranger-nvim").setup({ replace_netrw = true })
 			vim.api.nvim_set_keymap("n", "<leader>ef", "", {
@@ -71,5 +71,5 @@ require("lazy").setup({
 	{ "stevearc/vim-vscode-snippets" },
 	{ "wakatime/vim-wakatime" },
 	{ "lambdalisue/vim-suda" },
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })

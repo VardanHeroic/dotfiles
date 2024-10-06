@@ -1,7 +1,7 @@
 -- Setup language servers.
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup({})
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = nil
 	end,

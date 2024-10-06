@@ -1,5 +1,5 @@
 [submodule ".config/ranger/ranger_udisk_menu"]
-	path = .config/ranger/ranger_udisk_menu
+	path = .config/ranger/plugins/ranger_udisk_menu
 	url = https://github.com/VardanHeroic/ranger_udisk_menu.git
 [submodule ".config/ranger/plugins/ranger-archives"]
 	path = .config/ranger/plugins/ranger-archives

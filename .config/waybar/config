@@ -80,7 +80,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "󰥔 {:%Y-%m-%d}",
+        "format-alt": "󰥔 {:%A %d %B %Y}",
         "format": "󰥔 {:%H:%M}"
     },
     "cpu": {
@@ -98,10 +98,10 @@
 		"interval": 3,
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "critical-threshold": 90,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["","","",""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -139,6 +139,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
+        "max-volume": 120,
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -154,7 +155,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol -t 3"
     },
     "custom/media": {
         "format": "{icon} {}",

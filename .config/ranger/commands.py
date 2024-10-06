@@ -1,3 +1,4 @@
+from plugins.ranger_udisk_menu.mounter import mount
 from ranger.api.commands import Command
 class fzf_select(Command):
     """
@@ -58,3 +59,5 @@ class fzf_select(Command):
                 self.fm.cd(selected)
             else:
                 self.fm.select_file(selected)
+
+
