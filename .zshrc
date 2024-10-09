@@ -13,7 +13,7 @@ alias hgrep='cat -b ~/.histfile | grep'
 alias history='cat -b ~/.histfile '
 alias ls='lsd'
 alias grep='grep --color=auto'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 export QT_QPA_PLATFORMTHEME=qt5ct

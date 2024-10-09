@@ -1,0 +1,28 @@
+window#osd {
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: none;
+  background: alpha(@theme_bg_color, 1); }
+  window#osd #container {
+    margin: 12px; }
+  window#osd image,
+  window#osd label {
+    color: @theme_fg_color; }
+  window#osd progressbar:disabled,
+  window#osd image:disabled {
+    opacity: 0.5; }
+  window#osd progressbar {
+    min-height: 6px;
+    border-radius: 999px;
+    background: transparent;
+    border: none; }
+  window#osd trough {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: alpha(@theme_fg_color, 0.5); }
+  window#osd progress {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: linear-gradient(90deg, rgba(81,6,219,1) 0%, rgba(255,21,147,1) 100%); }
