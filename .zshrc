@@ -16,6 +16,7 @@ alias grep='grep --color=auto'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PATH="$PATH:/home/vardan/.local/bin"
 export EDITOR='nvim'

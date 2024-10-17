@@ -1,0 +1,12 @@
+[Unit]
+Description=startup sound service
+
+[Service]
+Type=oneshot
+ExecStart=cvlc --play-and-exit /home/vardan/Downloads/Windows-98-startup-sound.wav
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+Environment="PULSE_RUNTIME_PATH=/run/user/1000/pulse/"
+
+
+[Install]
+WantedBy=default.target

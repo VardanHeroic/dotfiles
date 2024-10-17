@@ -1,5 +1,6 @@
 from plugins.ranger_udisk_menu.mounter import mount
 from ranger.api.commands import Command
+from avfs import avfs
 class fzf_select(Command):
     """
     :fzf_select
@@ -59,5 +60,4 @@ class fzf_select(Command):
                 self.fm.cd(selected)
             else:
                 self.fm.select_file(selected)
-
 
