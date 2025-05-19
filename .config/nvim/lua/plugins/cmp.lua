@@ -7,8 +7,8 @@ cmp.setup({
 		end,
 	},
 	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -56,5 +56,15 @@ cmp.setup.cmdline(":", {
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require("lspconfig")["ts_ls"].setup({
+	capabilities = capabilities,  
+    on_attach = function(client, bufnr)
+    -- Disable tsserver diagnostics (linting)
+        client.handlers["textDocument/publishDiagnostics"] = function() end
+    end,
+})
+require("lspconfig").html.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").cssls.setup({
 	capabilities = capabilities,
 })

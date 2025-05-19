@@ -1,11 +1,32 @@
 -- Setup language servers.
 local lspconfig = require("lspconfig")
-lspconfig.pyright.setup({})
+lspconfig.eslint.setup({})
+-- lspconfig.asm_lsp.setup({})
+lspconfig.tailwindcss.setup({})
+-- lspconfig.pyright.setup({})
+lspconfig.cssls.setup({})
 lspconfig.ts_ls.setup({
 	on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = nil
-	end,
+    end,
 })
+
+
+
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '■', -- Change this to the icon you want (e.g., "■", "▲", etc.)
+    },
+    signs = true,
+    update_in_insert = false,
+})
+
+local signs = { Error = " ", Warn = " ", Hint = "", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 
 lspconfig.emmet_language_server.setup({
 	filetypes = {

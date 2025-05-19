@@ -1,6 +1,5 @@
 
 format = """
-$username\
 $hostname\
 $shlvl\
 $kubernetes\
@@ -45,7 +44,6 @@ $cmd_duration\
 $custom\
 $fill\
 $battery\
-$time\
 $line_break\
 
 

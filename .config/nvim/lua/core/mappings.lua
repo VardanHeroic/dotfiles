@@ -31,8 +31,8 @@ vim.keymap.set("v", "л", "k")
 vim.keymap.set("v", ";", "l")
 vim.keymap.set("v", "ч", ";")
 
-vim.keymap.set("n", "<leader>f", ":Format<CR>")
-vim.keymap.set("n", "<leader>F", ":FormatWrite<CR>")
+-- vim.keymap.set("n", "<leader>f", ":Format<CR>")
+-- vim.keymap.set("n", "<leader>F", ":FormatWrite<CR>")
 
 vim.keymap.set("i", "jj", "<ESC>")
 

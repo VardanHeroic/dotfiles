@@ -11,7 +11,7 @@ vim.opt.wrap = false
 vim.wo.linebreak = true
 vim.opt.virtualedit = "block"
 vim.opt.undofile = true
-vim.opt.shell = "/bin/zsh"
+-- vim.opt.shell = "/usr/bin/zsh"
 
 -- Mouse
 vim.opt.mouse = "a"
@@ -32,7 +32,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.shortmess:append("c")
 
 -- Indent Settings
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

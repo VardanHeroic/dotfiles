@@ -5,9 +5,9 @@ vim.cmd("set termguicolors")
 
 vim.cmd("au ColorScheme * hi Normal ctermbg=none guibg=none")
 vim.highlight.priorities.semantic_tokens = 95
---au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+-- au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
---vim.cmd('highlight Normal ctermbg=none')
---vim.cmd('highlight NonText ctermbg=none')
---vim.cmd('highlight Normal guibg=none')
---vim.cmd('highlight NonText guibg=none')
+vim.cmd('highlight Normal ctermbg=none')
+vim.cmd('highlight NonText ctermbg=none')
+vim.cmd('highlight Normal guibg=none')
+vim.cmd('highlight NonText guibg=none')

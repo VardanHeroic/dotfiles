@@ -7,3 +7,6 @@
 [submodule ".config/ranger/plugins/ranger_devicons"]
 	path = .config/ranger/plugins/ranger_devicons
 	url = https://github.com/VardanHeroic/ranger_devicons.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = https://github.com/VardanHeroic/ranger_devicons.git
