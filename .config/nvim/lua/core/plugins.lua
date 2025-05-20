@@ -152,5 +152,5 @@ require("lazy").setup({
 	{ "stevearc/vim-vscode-snippets" },
 	{ "wakatime/vim-wakatime" },
 	{ "lambdalisue/vim-suda" },
-    { "tribela/transparent.nvim" }
+    { "xiyaowong/transparent.nvim" }
 })

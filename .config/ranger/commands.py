@@ -1,6 +1,59 @@
-from plugins.ranger_udisk_menu.mounter import mount
+import os
+
+from ranger.ext.signals import SignalDispatcher
 from ranger.api.commands import Command
-from avfs import avfs
+from plugins.ranger_udisk_menu.mounter import mount
+
+
+class AVFSStatic(Command):
+    def __init__(self, *args, **kwargs):
+        Command.__init__(self, *args, **kwargs)
+        
+        self.avfs_path = os.path.expanduser("~/.avfs")
+        
+    def _mountavfs(self):
+        if not os.path.ismount(self.avfs_path):
+            self.fm.execute_command("mountavfs")
+            
+        return os.path.ismount(self.avfs_path)
+    
+class avfs(AVFSStatic):
+    """
+    :avfs_open
+
+    Open an archive using avfs. If avfs is not mounted for the current
+    user (in ~/.avfs), it is mounted on first call.
+    """
+        
+    def _return(self):
+        if not os.path.abspath(self.fm.thisfile.path).startswith(self.avfs_path + self.archive_path + "#"):
+            self.fm.signal_unbind(self.handler)
+            self.fm.select_file(self.archive_path)
+            
+    
+    def execute(self):
+        if not self._mountavfs():
+            self.fm.notify("avfs is not available and could not be mounted", bad=True)
+            return
+            
+        self.archive_path = os.path.abspath(self.fm.thisfile.path)
+        self.fm.cd(self.avfs_path + self.archive_path + "#/")
+        self.handler = self.fm.signal_bind('cd', self._return)
+        
+class avfs_remount(AVFSStatic):
+    """
+    :avfs_remount
+
+    (Re)mount the avfs directory.
+    """  
+    
+    def execute(self):
+        self.fm.execute_command("umountavfs")
+        if not self._mountavfs():
+            self.fm.notify("avfs is not available and could not be mounted", bad=True)
+            return
+
+
 class fzf_select(Command):
     """
     :fzf_select
